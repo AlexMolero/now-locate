@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "expedicion",
+            "otherEntityName": "expedicion",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "delegacion_inicio"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "expedicion_fin",
+            "otherEntityName": "expedicion",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "delegacion_fin"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "localidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "volumen_almacen",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "calle",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160307111300",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

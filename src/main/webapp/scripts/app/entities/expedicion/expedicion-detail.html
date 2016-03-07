@@ -1,0 +1,94 @@
+
+<div>
+    <h2><span translate="nowLocateApp.expedicion.detail.title">Expedicion</span> {{expedicion.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.fecha_inicio">Fecha_inicio</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{expedicion.fecha_inicio | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.fecha_entrega">Fecha_entrega</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{expedicion.fecha_entrega | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.frigorifico">Frigorifico</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{expedicion.frigorifico}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.temp_max">Temp_max</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{expedicion.temp_max}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.temp_min">Temp_min</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{expedicion.temp_min}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.descripcion">Descripcion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{expedicion.descripcion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.camion">camion</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="camion.detail({id:expedicion.camion.id})">{{expedicion.camion.matricula}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.delegacion_inicio">delegacion_inicio</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="delegacion.detail({id:expedicion.delegacion_inicio.id})">{{expedicion.delegacion_inicio.localidad}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="nowLocateApp.expedicion.delegacion_fin">delegacion_fin</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="delegacion.detail({id:expedicion.delegacion_fin.id})">{{expedicion.delegacion_fin.localidad}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
