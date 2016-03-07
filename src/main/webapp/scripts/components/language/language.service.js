@@ -28,6 +28,7 @@ angular.module('nowLocateApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
+        ,'es'
         // jhipster-needle-006 - JHipster will add new languages here
     ]
 );

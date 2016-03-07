@@ -26,7 +26,7 @@
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="localidad"><span translate="nowLocateApp.delegacion.localidad">Localidad</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="volumen_almacen"><span translate="nowLocateApp.delegacion.volumen_almacen">Volumen_almacen</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="volumenAlmacen"><span translate="nowLocateApp.delegacion.volumenAlmacen">VolumenAlmacen</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="calle"><span translate="nowLocateApp.delegacion.calle">Calle</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
@@ -35,7 +35,7 @@
                 <tr ng-repeat="delegacion in delegacions track by delegacion.id">
                     <td><a ui-sref="delegacion.detail({id:delegacion.id})">{{delegacion.id}}</a></td>
                     <td>{{delegacion.localidad}}</td>
-                    <td>{{delegacion.volumen_almacen}}</td>
+                    <td>{{delegacion.volumenAlmacen}}</td>
                     <td>{{delegacion.calle}}</td>
                     <td>
                         <button type="submit"

@@ -5,14 +5,14 @@
             "relationshipName": "expedicion",
             "otherEntityName": "expedicion",
             "relationshipType": "one-to-many",
-            "otherEntityRelationshipName": "delegacion_inicio"
+            "otherEntityRelationshipName": "delegacionInicio"
         },
         {
             "relationshipId": 2,
-            "relationshipName": "expedicion_fin",
+            "relationshipName": "expedicionFin",
             "otherEntityName": "expedicion",
             "relationshipType": "one-to-many",
-            "otherEntityRelationshipName": "delegacion_fin"
+            "otherEntityRelationshipName": "delegacionFin"
         }
     ],
     "fields": [
@@ -23,7 +23,7 @@
         },
         {
             "fieldId": 2,
-            "fieldName": "volumen_almacen",
+            "fieldName": "volumenAlmacen",
             "fieldType": "Integer"
         },
         {

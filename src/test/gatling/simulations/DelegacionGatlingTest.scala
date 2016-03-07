@@ -67,7 +67,7 @@ class DelegacionGatlingTest extends Simulation {
             .exec(http("Create new delegacion")
             .post("/api/delegacions")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "localidad":"SAMPLE_TEXT", "volumen_almacen":"0", "calle":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "localidad":"SAMPLE_TEXT", "volumenAlmacen":"0", "calle":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_delegacion_url")))
             .pause(10)

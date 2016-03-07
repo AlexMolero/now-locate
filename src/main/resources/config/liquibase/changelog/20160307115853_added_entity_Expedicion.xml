@@ -40,13 +40,13 @@
 
         <addForeignKeyConstraint baseColumnNames="delegacion_inicio_id"
                                  baseTableName="expedicion"
-                                 constraintName="fk_expedicion_delegacion_inicio_id"
+                                 constraintName="fk_expedicion_delegacioninicio_id"
                                  referencedColumnNames="id"
                                  referencedTableName="delegacion"/>
 
         <addForeignKeyConstraint baseColumnNames="delegacion_fin_id"
                                  baseTableName="expedicion"
-                                 constraintName="fk_expedicion_delegacion_fin_id"
+                                 constraintName="fk_expedicion_delegacionfin_id"
                                  referencedColumnNames="id"
                                  referencedTableName="delegacion"/>
 

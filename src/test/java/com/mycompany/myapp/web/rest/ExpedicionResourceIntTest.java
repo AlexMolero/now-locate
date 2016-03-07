@@ -92,11 +92,11 @@ public class ExpedicionResourceIntTest {
     @Before
     public void initTest() {
         expedicion = new Expedicion();
-        expedicion.setFecha_inicio(DEFAULT_FECHA_INICIO);
-        expedicion.setFecha_entrega(DEFAULT_FECHA_ENTREGA);
+        expedicion.setFechaInicio(DEFAULT_FECHA_INICIO);
+        expedicion.setFechaEntrega(DEFAULT_FECHA_ENTREGA);
         expedicion.setFrigorifico(DEFAULT_FRIGORIFICO);
-        expedicion.setTemp_max(DEFAULT_TEMP_MAX);
-        expedicion.setTemp_min(DEFAULT_TEMP_MIN);
+        expedicion.setTempMax(DEFAULT_TEMP_MAX);
+        expedicion.setTempMin(DEFAULT_TEMP_MIN);
         expedicion.setDescripcion(DEFAULT_DESCRIPCION);
     }
 
@@ -116,11 +116,11 @@ public class ExpedicionResourceIntTest {
         List<Expedicion> expedicions = expedicionRepository.findAll();
         assertThat(expedicions).hasSize(databaseSizeBeforeCreate + 1);
         Expedicion testExpedicion = expedicions.get(expedicions.size() - 1);
-        assertThat(testExpedicion.getFecha_inicio()).isEqualTo(DEFAULT_FECHA_INICIO);
-        assertThat(testExpedicion.getFecha_entrega()).isEqualTo(DEFAULT_FECHA_ENTREGA);
+        assertThat(testExpedicion.getFechaInicio()).isEqualTo(DEFAULT_FECHA_INICIO);
+        assertThat(testExpedicion.getFechaEntrega()).isEqualTo(DEFAULT_FECHA_ENTREGA);
         assertThat(testExpedicion.getFrigorifico()).isEqualTo(DEFAULT_FRIGORIFICO);
-        assertThat(testExpedicion.getTemp_max()).isEqualTo(DEFAULT_TEMP_MAX);
-        assertThat(testExpedicion.getTemp_min()).isEqualTo(DEFAULT_TEMP_MIN);
+        assertThat(testExpedicion.getTempMax()).isEqualTo(DEFAULT_TEMP_MAX);
+        assertThat(testExpedicion.getTempMin()).isEqualTo(DEFAULT_TEMP_MIN);
         assertThat(testExpedicion.getDescripcion()).isEqualTo(DEFAULT_DESCRIPCION);
     }
 
@@ -135,11 +135,11 @@ public class ExpedicionResourceIntTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(expedicion.getId().intValue())))
-                .andExpect(jsonPath("$.[*].fecha_inicio").value(hasItem(DEFAULT_FECHA_INICIO.toString())))
-                .andExpect(jsonPath("$.[*].fecha_entrega").value(hasItem(DEFAULT_FECHA_ENTREGA.toString())))
+                .andExpect(jsonPath("$.[*].fechaInicio").value(hasItem(DEFAULT_FECHA_INICIO.toString())))
+                .andExpect(jsonPath("$.[*].fechaEntrega").value(hasItem(DEFAULT_FECHA_ENTREGA.toString())))
                 .andExpect(jsonPath("$.[*].frigorifico").value(hasItem(DEFAULT_FRIGORIFICO.booleanValue())))
-                .andExpect(jsonPath("$.[*].temp_max").value(hasItem(DEFAULT_TEMP_MAX)))
-                .andExpect(jsonPath("$.[*].temp_min").value(hasItem(DEFAULT_TEMP_MIN)))
+                .andExpect(jsonPath("$.[*].tempMax").value(hasItem(DEFAULT_TEMP_MAX)))
+                .andExpect(jsonPath("$.[*].tempMin").value(hasItem(DEFAULT_TEMP_MIN)))
                 .andExpect(jsonPath("$.[*].descripcion").value(hasItem(DEFAULT_DESCRIPCION.toString())));
     }
 
@@ -154,11 +154,11 @@ public class ExpedicionResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(expedicion.getId().intValue()))
-            .andExpect(jsonPath("$.fecha_inicio").value(DEFAULT_FECHA_INICIO.toString()))
-            .andExpect(jsonPath("$.fecha_entrega").value(DEFAULT_FECHA_ENTREGA.toString()))
+            .andExpect(jsonPath("$.fechaInicio").value(DEFAULT_FECHA_INICIO.toString()))
+            .andExpect(jsonPath("$.fechaEntrega").value(DEFAULT_FECHA_ENTREGA.toString()))
             .andExpect(jsonPath("$.frigorifico").value(DEFAULT_FRIGORIFICO.booleanValue()))
-            .andExpect(jsonPath("$.temp_max").value(DEFAULT_TEMP_MAX))
-            .andExpect(jsonPath("$.temp_min").value(DEFAULT_TEMP_MIN))
+            .andExpect(jsonPath("$.tempMax").value(DEFAULT_TEMP_MAX))
+            .andExpect(jsonPath("$.tempMin").value(DEFAULT_TEMP_MIN))
             .andExpect(jsonPath("$.descripcion").value(DEFAULT_DESCRIPCION.toString()));
     }
 
@@ -179,11 +179,11 @@ public class ExpedicionResourceIntTest {
 		int databaseSizeBeforeUpdate = expedicionRepository.findAll().size();
 
         // Update the expedicion
-        expedicion.setFecha_inicio(UPDATED_FECHA_INICIO);
-        expedicion.setFecha_entrega(UPDATED_FECHA_ENTREGA);
+        expedicion.setFechaInicio(UPDATED_FECHA_INICIO);
+        expedicion.setFechaEntrega(UPDATED_FECHA_ENTREGA);
         expedicion.setFrigorifico(UPDATED_FRIGORIFICO);
-        expedicion.setTemp_max(UPDATED_TEMP_MAX);
-        expedicion.setTemp_min(UPDATED_TEMP_MIN);
+        expedicion.setTempMax(UPDATED_TEMP_MAX);
+        expedicion.setTempMin(UPDATED_TEMP_MIN);
         expedicion.setDescripcion(UPDATED_DESCRIPCION);
 
         restExpedicionMockMvc.perform(put("/api/expedicions")
@@ -195,11 +195,11 @@ public class ExpedicionResourceIntTest {
         List<Expedicion> expedicions = expedicionRepository.findAll();
         assertThat(expedicions).hasSize(databaseSizeBeforeUpdate);
         Expedicion testExpedicion = expedicions.get(expedicions.size() - 1);
-        assertThat(testExpedicion.getFecha_inicio()).isEqualTo(UPDATED_FECHA_INICIO);
-        assertThat(testExpedicion.getFecha_entrega()).isEqualTo(UPDATED_FECHA_ENTREGA);
+        assertThat(testExpedicion.getFechaInicio()).isEqualTo(UPDATED_FECHA_INICIO);
+        assertThat(testExpedicion.getFechaEntrega()).isEqualTo(UPDATED_FECHA_ENTREGA);
         assertThat(testExpedicion.getFrigorifico()).isEqualTo(UPDATED_FRIGORIFICO);
-        assertThat(testExpedicion.getTemp_max()).isEqualTo(UPDATED_TEMP_MAX);
-        assertThat(testExpedicion.getTemp_min()).isEqualTo(UPDATED_TEMP_MIN);
+        assertThat(testExpedicion.getTempMax()).isEqualTo(UPDATED_TEMP_MAX);
+        assertThat(testExpedicion.getTempMin()).isEqualTo(UPDATED_TEMP_MIN);
         assertThat(testExpedicion.getDescripcion()).isEqualTo(UPDATED_DESCRIPCION);
     }
 

@@ -28,20 +28,20 @@ public class Delegacion implements Serializable {
     private String localidad;
 
     @Column(name = "volumen_almacen")
-    private Integer volumen_almacen;
+    private Integer volumenAlmacen;
 
     @Column(name = "calle")
     private String calle;
 
-    @OneToMany(mappedBy = "delegacion_inicio")
+    @OneToMany(mappedBy = "delegacionInicio")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Expedicion> expedicions = new HashSet<>();
 
-    @OneToMany(mappedBy = "delegacion_fin")
+    @OneToMany(mappedBy = "delegacionFin")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Expedicion> expedicion_fins = new HashSet<>();
+    private Set<Expedicion> expedicionFins = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -59,12 +59,12 @@ public class Delegacion implements Serializable {
         this.localidad = localidad;
     }
 
-    public Integer getVolumen_almacen() {
-        return volumen_almacen;
+    public Integer getVolumenAlmacen() {
+        return volumenAlmacen;
     }
 
-    public void setVolumen_almacen(Integer volumen_almacen) {
-        this.volumen_almacen = volumen_almacen;
+    public void setVolumenAlmacen(Integer volumenAlmacen) {
+        this.volumenAlmacen = volumenAlmacen;
     }
 
     public String getCalle() {
@@ -83,12 +83,12 @@ public class Delegacion implements Serializable {
         this.expedicions = expedicions;
     }
 
-    public Set<Expedicion> getExpedicion_fins() {
-        return expedicion_fins;
+    public Set<Expedicion> getExpedicionFins() {
+        return expedicionFins;
     }
 
-    public void setExpedicion_fins(Set<Expedicion> expedicions) {
-        this.expedicion_fins = expedicions;
+    public void setExpedicionFins(Set<Expedicion> expedicions) {
+        this.expedicionFins = expedicions;
     }
 
     @Override
@@ -113,7 +113,7 @@ public class Delegacion implements Serializable {
         return "Delegacion{" +
             "id=" + id +
             ", localidad='" + localidad + "'" +
-            ", volumen_almacen='" + volumen_almacen + "'" +
+            ", volumenAlmacen='" + volumenAlmacen + "'" +
             ", calle='" + calle + "'" +
             '}';
     }

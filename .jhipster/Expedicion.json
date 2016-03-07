@@ -9,14 +9,14 @@
         },
         {
             "relationshipId": 2,
-            "relationshipName": "delegacion_inicio",
+            "relationshipName": "delegacionInicio",
             "otherEntityName": "delegacion",
             "relationshipType": "many-to-one",
             "otherEntityField": "localidad"
         },
         {
             "relationshipId": 3,
-            "relationshipName": "delegacion_fin",
+            "relationshipName": "delegacionFin",
             "otherEntityName": "delegacion",
             "relationshipType": "many-to-one",
             "otherEntityField": "localidad"
@@ -25,12 +25,12 @@
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "fecha_inicio",
+            "fieldName": "fechaInicio",
             "fieldType": "LocalDate"
         },
         {
             "fieldId": 2,
-            "fieldName": "fecha_entrega",
+            "fieldName": "fechaEntrega",
             "fieldType": "LocalDate"
         },
         {
@@ -40,12 +40,12 @@
         },
         {
             "fieldId": 4,
-            "fieldName": "temp_max",
+            "fieldName": "tempMax",
             "fieldType": "Integer"
         },
         {
             "fieldId": 5,
-            "fieldName": "temp_min",
+            "fieldName": "tempMin",
             "fieldType": "Integer"
         },
         {

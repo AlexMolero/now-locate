@@ -25,35 +25,35 @@
             <thead>
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="fecha_inicio"><span translate="nowLocateApp.expedicion.fecha_inicio">Fecha_inicio</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="fecha_entrega"><span translate="nowLocateApp.expedicion.fecha_entrega">Fecha_entrega</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fechaInicio"><span translate="nowLocateApp.expedicion.fechaInicio">FechaInicio</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fechaEntrega"><span translate="nowLocateApp.expedicion.fechaEntrega">FechaEntrega</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="frigorifico"><span translate="nowLocateApp.expedicion.frigorifico">Frigorifico</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="temp_max"><span translate="nowLocateApp.expedicion.temp_max">Temp_max</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="temp_min"><span translate="nowLocateApp.expedicion.temp_min">Temp_min</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tempMax"><span translate="nowLocateApp.expedicion.tempMax">TempMax</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tempMin"><span translate="nowLocateApp.expedicion.tempMin">TempMin</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="descripcion"><span translate="nowLocateApp.expedicion.descripcion">Descripcion</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="camion.matricula"><span translate="nowLocateApp.expedicion.camion">camion</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="delegacion_inicio.localidad"><span translate="nowLocateApp.expedicion.delegacion_inicio">delegacion_inicio</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="delegacion_fin.localidad"><span translate="nowLocateApp.expedicion.delegacion_fin">delegacion_fin</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="delegacionInicio.localidad"><span translate="nowLocateApp.expedicion.delegacionInicio">delegacionInicio</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="delegacionFin.localidad"><span translate="nowLocateApp.expedicion.delegacionFin">delegacionFin</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="expedicion in expedicions track by expedicion.id">
                     <td><a ui-sref="expedicion.detail({id:expedicion.id})">{{expedicion.id}}</a></td>
-                        <td>{{expedicion.fecha_inicio | date:'mediumDate'}}</td>
-                        <td>{{expedicion.fecha_entrega | date:'mediumDate'}}</td>
+                        <td>{{expedicion.fechaInicio | date:'mediumDate'}}</td>
+                        <td>{{expedicion.fechaEntrega | date:'mediumDate'}}</td>
                     <td>{{expedicion.frigorifico}}</td>
-                    <td>{{expedicion.temp_max}}</td>
-                    <td>{{expedicion.temp_min}}</td>
+                    <td>{{expedicion.tempMax}}</td>
+                    <td>{{expedicion.tempMin}}</td>
                     <td>{{expedicion.descripcion}}</td>
                     <td>
                         <a ui-sref="camion.detail({id:expedicion.camion.id})">{{expedicion.camion.matricula}}</a>
                     </td>
                     <td>
-                        <a ui-sref="delegacion.detail({id:expedicion.delegacion_inicio.id})">{{expedicion.delegacion_inicio.localidad}}</a>
+                        <a ui-sref="delegacion.detail({id:expedicion.delegacionInicio.id})">{{expedicion.delegacionInicio.localidad}}</a>
                     </td>
                     <td>
-                        <a ui-sref="delegacion.detail({id:expedicion.delegacion_fin.id})">{{expedicion.delegacion_fin.localidad}}</a>
+                        <a ui-sref="delegacion.detail({id:expedicion.delegacionFin.id})">{{expedicion.delegacionFin.localidad}}</a>
                     </td>
                     <td>
                         <button type="submit"

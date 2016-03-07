@@ -8,24 +8,24 @@ angular.module('nowLocateApp')
                 method: 'GET',
                 transformResponse: function (data) {
                     data = angular.fromJson(data);
-                    data.fecha_inicio = DateUtils.convertLocaleDateFromServer(data.fecha_inicio);
-                    data.fecha_entrega = DateUtils.convertLocaleDateFromServer(data.fecha_entrega);
+                    data.fechaInicio = DateUtils.convertLocaleDateFromServer(data.fechaInicio);
+                    data.fechaEntrega = DateUtils.convertLocaleDateFromServer(data.fechaEntrega);
                     return data;
                 }
             },
             'update': {
                 method: 'PUT',
                 transformRequest: function (data) {
-                    data.fecha_inicio = DateUtils.convertLocaleDateToServer(data.fecha_inicio);
-                    data.fecha_entrega = DateUtils.convertLocaleDateToServer(data.fecha_entrega);
+                    data.fechaInicio = DateUtils.convertLocaleDateToServer(data.fechaInicio);
+                    data.fechaEntrega = DateUtils.convertLocaleDateToServer(data.fechaEntrega);
                     return angular.toJson(data);
                 }
             },
             'save': {
                 method: 'POST',
                 transformRequest: function (data) {
-                    data.fecha_inicio = DateUtils.convertLocaleDateToServer(data.fecha_inicio);
-                    data.fecha_entrega = DateUtils.convertLocaleDateToServer(data.fecha_entrega);
+                    data.fechaInicio = DateUtils.convertLocaleDateToServer(data.fechaInicio);
+                    data.fechaEntrega = DateUtils.convertLocaleDateToServer(data.fechaEntrega);
                     return angular.toJson(data);
                 }
             }

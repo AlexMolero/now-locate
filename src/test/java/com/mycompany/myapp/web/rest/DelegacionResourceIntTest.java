@@ -81,7 +81,7 @@ public class DelegacionResourceIntTest {
     public void initTest() {
         delegacion = new Delegacion();
         delegacion.setLocalidad(DEFAULT_LOCALIDAD);
-        delegacion.setVolumen_almacen(DEFAULT_VOLUMEN_ALMACEN);
+        delegacion.setVolumenAlmacen(DEFAULT_VOLUMEN_ALMACEN);
         delegacion.setCalle(DEFAULT_CALLE);
     }
 
@@ -102,7 +102,7 @@ public class DelegacionResourceIntTest {
         assertThat(delegacions).hasSize(databaseSizeBeforeCreate + 1);
         Delegacion testDelegacion = delegacions.get(delegacions.size() - 1);
         assertThat(testDelegacion.getLocalidad()).isEqualTo(DEFAULT_LOCALIDAD);
-        assertThat(testDelegacion.getVolumen_almacen()).isEqualTo(DEFAULT_VOLUMEN_ALMACEN);
+        assertThat(testDelegacion.getVolumenAlmacen()).isEqualTo(DEFAULT_VOLUMEN_ALMACEN);
         assertThat(testDelegacion.getCalle()).isEqualTo(DEFAULT_CALLE);
     }
 
@@ -118,7 +118,7 @@ public class DelegacionResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(delegacion.getId().intValue())))
                 .andExpect(jsonPath("$.[*].localidad").value(hasItem(DEFAULT_LOCALIDAD.toString())))
-                .andExpect(jsonPath("$.[*].volumen_almacen").value(hasItem(DEFAULT_VOLUMEN_ALMACEN)))
+                .andExpect(jsonPath("$.[*].volumenAlmacen").value(hasItem(DEFAULT_VOLUMEN_ALMACEN)))
                 .andExpect(jsonPath("$.[*].calle").value(hasItem(DEFAULT_CALLE.toString())));
     }
 
@@ -134,7 +134,7 @@ public class DelegacionResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(delegacion.getId().intValue()))
             .andExpect(jsonPath("$.localidad").value(DEFAULT_LOCALIDAD.toString()))
-            .andExpect(jsonPath("$.volumen_almacen").value(DEFAULT_VOLUMEN_ALMACEN))
+            .andExpect(jsonPath("$.volumenAlmacen").value(DEFAULT_VOLUMEN_ALMACEN))
             .andExpect(jsonPath("$.calle").value(DEFAULT_CALLE.toString()));
     }
 
@@ -156,7 +156,7 @@ public class DelegacionResourceIntTest {
 
         // Update the delegacion
         delegacion.setLocalidad(UPDATED_LOCALIDAD);
-        delegacion.setVolumen_almacen(UPDATED_VOLUMEN_ALMACEN);
+        delegacion.setVolumenAlmacen(UPDATED_VOLUMEN_ALMACEN);
         delegacion.setCalle(UPDATED_CALLE);
 
         restDelegacionMockMvc.perform(put("/api/delegacions")
@@ -169,7 +169,7 @@ public class DelegacionResourceIntTest {
         assertThat(delegacions).hasSize(databaseSizeBeforeUpdate);
         Delegacion testDelegacion = delegacions.get(delegacions.size() - 1);
         assertThat(testDelegacion.getLocalidad()).isEqualTo(UPDATED_LOCALIDAD);
-        assertThat(testDelegacion.getVolumen_almacen()).isEqualTo(UPDATED_VOLUMEN_ALMACEN);
+        assertThat(testDelegacion.getVolumenAlmacen()).isEqualTo(UPDATED_VOLUMEN_ALMACEN);
         assertThat(testDelegacion.getCalle()).isEqualTo(UPDATED_CALLE);
     }
 

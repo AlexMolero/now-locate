@@ -25,19 +25,19 @@ public class Expedicion implements Serializable {
     private Long id;
 
     @Column(name = "fecha_inicio")
-    private LocalDate fecha_inicio;
+    private LocalDate fechaInicio;
 
     @Column(name = "fecha_entrega")
-    private LocalDate fecha_entrega;
+    private LocalDate fechaEntrega;
 
     @Column(name = "frigorifico")
     private Boolean frigorifico;
 
     @Column(name = "temp_max")
-    private Integer temp_max;
+    private Integer tempMax;
 
     @Column(name = "temp_min")
-    private Integer temp_min;
+    private Integer tempMin;
 
     @Column(name = "descripcion")
     private String descripcion;
@@ -48,11 +48,11 @@ public class Expedicion implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "delegacion_inicio_id")
-    private Delegacion delegacion_inicio;
+    private Delegacion delegacionInicio;
 
     @ManyToOne
     @JoinColumn(name = "delegacion_fin_id")
-    private Delegacion delegacion_fin;
+    private Delegacion delegacionFin;
 
     public Long getId() {
         return id;
@@ -62,20 +62,20 @@ public class Expedicion implements Serializable {
         this.id = id;
     }
 
-    public LocalDate getFecha_inicio() {
-        return fecha_inicio;
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setFecha_inicio(LocalDate fecha_inicio) {
-        this.fecha_inicio = fecha_inicio;
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
     }
 
-    public LocalDate getFecha_entrega() {
-        return fecha_entrega;
+    public LocalDate getFechaEntrega() {
+        return fechaEntrega;
     }
 
-    public void setFecha_entrega(LocalDate fecha_entrega) {
-        this.fecha_entrega = fecha_entrega;
+    public void setFechaEntrega(LocalDate fechaEntrega) {
+        this.fechaEntrega = fechaEntrega;
     }
 
     public Boolean getFrigorifico() {
@@ -86,20 +86,20 @@ public class Expedicion implements Serializable {
         this.frigorifico = frigorifico;
     }
 
-    public Integer getTemp_max() {
-        return temp_max;
+    public Integer getTempMax() {
+        return tempMax;
     }
 
-    public void setTemp_max(Integer temp_max) {
-        this.temp_max = temp_max;
+    public void setTempMax(Integer tempMax) {
+        this.tempMax = tempMax;
     }
 
-    public Integer getTemp_min() {
-        return temp_min;
+    public Integer getTempMin() {
+        return tempMin;
     }
 
-    public void setTemp_min(Integer temp_min) {
-        this.temp_min = temp_min;
+    public void setTempMin(Integer tempMin) {
+        this.tempMin = tempMin;
     }
 
     public String getDescripcion() {
@@ -118,20 +118,20 @@ public class Expedicion implements Serializable {
         this.camion = camion;
     }
 
-    public Delegacion getDelegacion_inicio() {
-        return delegacion_inicio;
+    public Delegacion getDelegacionInicio() {
+        return delegacionInicio;
     }
 
-    public void setDelegacion_inicio(Delegacion delegacion) {
-        this.delegacion_inicio = delegacion;
+    public void setDelegacionInicio(Delegacion delegacion) {
+        this.delegacionInicio = delegacion;
     }
 
-    public Delegacion getDelegacion_fin() {
-        return delegacion_fin;
+    public Delegacion getDelegacionFin() {
+        return delegacionFin;
     }
 
-    public void setDelegacion_fin(Delegacion delegacion) {
-        this.delegacion_fin = delegacion;
+    public void setDelegacionFin(Delegacion delegacion) {
+        this.delegacionFin = delegacion;
     }
 
     @Override
@@ -155,11 +155,11 @@ public class Expedicion implements Serializable {
     public String toString() {
         return "Expedicion{" +
             "id=" + id +
-            ", fecha_inicio='" + fecha_inicio + "'" +
-            ", fecha_entrega='" + fecha_entrega + "'" +
+            ", fechaInicio='" + fechaInicio + "'" +
+            ", fechaEntrega='" + fechaEntrega + "'" +
             ", frigorifico='" + frigorifico + "'" +
-            ", temp_max='" + temp_max + "'" +
-            ", temp_min='" + temp_min + "'" +
+            ", tempMax='" + tempMax + "'" +
+            ", tempMin='" + tempMin + "'" +
             ", descripcion='" + descripcion + "'" +
             '}';
     }

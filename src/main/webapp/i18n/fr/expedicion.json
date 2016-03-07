@@ -15,15 +15,15 @@
             "detail": {
                 "title": "Expedicion"
             },
-            "fecha_inicio": "Fecha_inicio",
-            "fecha_entrega": "Fecha_entrega",
+            "fechaInicio": "FechaInicio",
+            "fechaEntrega": "FechaEntrega",
             "frigorifico": "Frigorifico",
-            "temp_max": "Temp_max",
-            "temp_min": "Temp_min",
+            "tempMax": "TempMax",
+            "tempMin": "TempMin",
             "descripcion": "Descripcion",
             "camion": "Camion",
-            "delegacion_inicio": "Delegacion_inicio",
-            "delegacion_fin": "Delegacion_fin"
+            "delegacionInicio": "DelegacionInicio",
+            "delegacionFin": "DelegacionFin"
         }
     }
 }

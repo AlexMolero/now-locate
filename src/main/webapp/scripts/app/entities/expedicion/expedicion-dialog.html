@@ -14,19 +14,19 @@
                     ng-model="expedicion.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="nowLocateApp.expedicion.fecha_inicio" for="field_fecha_inicio">Fecha_inicio</label>
-            <input id="field_fecha_inicio" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="expedicion.fecha_inicio" is-open="datePickerForFecha_inicio.status.opened"
+            <label class="control-label" translate="nowLocateApp.expedicion.fechaInicio" for="field_fechaInicio">FechaInicio</label>
+            <input id="field_fechaInicio" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="expedicion.fechaInicio" is-open="datePickerForFechaInicio.status.opened"
             />
             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="datePickerForFecha_inicioOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="datePickerForFechaInicioOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
             </span>
         </div>
         <div class="form-group">
-            <label class="control-label" translate="nowLocateApp.expedicion.fecha_entrega" for="field_fecha_entrega">Fecha_entrega</label>
-            <input id="field_fecha_entrega" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="expedicion.fecha_entrega" is-open="datePickerForFecha_entrega.status.opened"
+            <label class="control-label" translate="nowLocateApp.expedicion.fechaEntrega" for="field_fechaEntrega">FechaEntrega</label>
+            <input id="field_fechaEntrega" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="expedicion.fechaEntrega" is-open="datePickerForFechaEntrega.status.opened"
             />
             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="datePickerForFecha_entregaOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="datePickerForFechaEntregaOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
             </span>
         </div>
         <div class="form-group">
@@ -36,15 +36,15 @@
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="nowLocateApp.expedicion.temp_max" for="field_temp_max">Temp_max</label>
-            <input type="number" class="form-control" name="temp_max" id="field_temp_max"
-                    ng-model="expedicion.temp_max"
+            <label class="control-label" translate="nowLocateApp.expedicion.tempMax" for="field_tempMax">TempMax</label>
+            <input type="number" class="form-control" name="tempMax" id="field_tempMax"
+                    ng-model="expedicion.tempMax"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="nowLocateApp.expedicion.temp_min" for="field_temp_min">Temp_min</label>
-            <input type="number" class="form-control" name="temp_min" id="field_temp_min"
-                    ng-model="expedicion.temp_min"
+            <label class="control-label" translate="nowLocateApp.expedicion.tempMin" for="field_tempMin">TempMin</label>
+            <input type="number" class="form-control" name="tempMin" id="field_tempMin"
+                    ng-model="expedicion.tempMin"
                      />
         </div>
         <div class="form-group">
@@ -61,14 +61,14 @@
             </select>
         </div>
         <div class="form-group">
-            <label translate="nowLocateApp.expedicion.delegacion_inicio" for="field_delegacion_inicio">delegacion_inicio</label>
-            <select class="form-control" id="field_delegacion_inicio" name="delegacion_inicio" ng-model="expedicion.delegacion_inicio" ng-options="delegacion as delegacion.localidad for delegacion in delegacions track by delegacion.id">
+            <label translate="nowLocateApp.expedicion.delegacionInicio" for="field_delegacionInicio">delegacionInicio</label>
+            <select class="form-control" id="field_delegacionInicio" name="delegacionInicio" ng-model="expedicion.delegacionInicio" ng-options="delegacion as delegacion.localidad for delegacion in delegacions track by delegacion.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
-            <label translate="nowLocateApp.expedicion.delegacion_fin" for="field_delegacion_fin">delegacion_fin</label>
-            <select class="form-control" id="field_delegacion_fin" name="delegacion_fin" ng-model="expedicion.delegacion_fin" ng-options="delegacion as delegacion.localidad for delegacion in delegacions track by delegacion.id">
+            <label translate="nowLocateApp.expedicion.delegacionFin" for="field_delegacionFin">delegacionFin</label>
+            <select class="form-control" id="field_delegacionFin" name="delegacionFin" ng-model="expedicion.delegacionFin" ng-options="delegacion as delegacion.localidad for delegacion in delegacions track by delegacion.id">
                 <option value=""></option>
             </select>
         </div>

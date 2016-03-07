@@ -67,7 +67,7 @@ class ExpedicionGatlingTest extends Simulation {
             .exec(http("Create new expedicion")
             .post("/api/expedicions")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "fecha_inicio":"2020-01-01T00:00:00.000Z", "fecha_entrega":"2020-01-01T00:00:00.000Z", "frigorifico":null, "temp_max":"0", "temp_min":"0", "descripcion":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "fechaInicio":"2020-01-01T00:00:00.000Z", "fechaEntrega":"2020-01-01T00:00:00.000Z", "frigorifico":null, "tempMax":"0", "tempMin":"0", "descripcion":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_expedicion_url")))
             .pause(10)

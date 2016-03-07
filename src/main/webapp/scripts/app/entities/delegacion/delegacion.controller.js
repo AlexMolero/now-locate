@@ -39,7 +39,7 @@ angular.module('nowLocateApp')
         $scope.clear = function () {
             $scope.delegacion = {
                 localidad: null,
-                volumen_almacen: null,
+                volumenAlmacen: null,
                 calle: null,
                 id: null
             };

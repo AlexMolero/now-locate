@@ -16,10 +16,10 @@
                 "title": "Delegacion"
             },
             "localidad": "Localidad",
-            "volumen_almacen": "Volumen_almacen",
+            "volumenAlmacen": "VolumenAlmacen",
             "calle": "Calle",
             "expedicion": "Expedicion",
-            "expedicion_fin": "Expedicion_fin"
+            "expedicionFin": "ExpedicionFin"
         }
     }
 }

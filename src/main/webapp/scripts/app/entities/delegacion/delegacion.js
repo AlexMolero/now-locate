@@ -62,7 +62,7 @@ angular.module('nowLocateApp')
                             entity: function () {
                                 return {
                                     localidad: null,
-                                    volumen_almacen: null,
+                                    volumenAlmacen: null,
                                     calle: null,
                                     id: null
                                 };

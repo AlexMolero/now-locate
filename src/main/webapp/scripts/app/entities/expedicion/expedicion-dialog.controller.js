@@ -35,22 +35,22 @@ angular.module('nowLocateApp').controller('ExpedicionDialogController',
         $scope.clear = function() {
             $uibModalInstance.dismiss('cancel');
         };
-        $scope.datePickerForFecha_inicio = {};
+        $scope.datePickerForFechaInicio = {};
 
-        $scope.datePickerForFecha_inicio.status = {
+        $scope.datePickerForFechaInicio.status = {
             opened: false
         };
 
-        $scope.datePickerForFecha_inicioOpen = function($event) {
-            $scope.datePickerForFecha_inicio.status.opened = true;
+        $scope.datePickerForFechaInicioOpen = function($event) {
+            $scope.datePickerForFechaInicio.status.opened = true;
         };
-        $scope.datePickerForFecha_entrega = {};
+        $scope.datePickerForFechaEntrega = {};
 
-        $scope.datePickerForFecha_entrega.status = {
+        $scope.datePickerForFechaEntrega.status = {
             opened: false
         };
 
-        $scope.datePickerForFecha_entregaOpen = function($event) {
-            $scope.datePickerForFecha_entrega.status.opened = true;
+        $scope.datePickerForFechaEntregaOpen = function($event) {
+            $scope.datePickerForFechaEntrega.status.opened = true;
         };
 }]);

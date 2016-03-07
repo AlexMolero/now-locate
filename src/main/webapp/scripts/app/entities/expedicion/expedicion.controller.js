@@ -38,11 +38,11 @@ angular.module('nowLocateApp')
 
         $scope.clear = function () {
             $scope.expedicion = {
-                fecha_inicio: null,
-                fecha_entrega: null,
+                fechaInicio: null,
+                fechaEntrega: null,
                 frigorifico: null,
-                temp_max: null,
-                temp_min: null,
+                tempMax: null,
+                tempMin: null,
                 descripcion: null,
                 id: null
             };
