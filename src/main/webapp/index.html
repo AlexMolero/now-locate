@@ -21,12 +21,19 @@
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div ui-view="navbar" ng-cloak=""></div>
-        <div class="container">
+        <div id="wrapper" style="float:left; clear:both;">
+            <div id="sidebar-wrapper" ui-view="navbar" ng-cloak=""></div>
+        </div>
+        <div class="container" style="float: left;">
+            <div class="header" style="width: auto;">
+                <img  style=" height: 30px; width: 30px;margin: 5px;" src="assets/images/default-user-image.png">
+                <span style="color:white;" translate-values="{username: '{{account.login}}'}">{{account.login}}</span>
+                <img  style="float:right; height:55px; margin: 5px; " src="assets/images/logoNowLocate.png">
+            </div>
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
-                <p translate="footer">This is your footer</p>
+                <p class="right" style="color:white;" <!--translate="footer"--> NowLocate</p>
             </div>
         </div>
 
@@ -174,6 +181,144 @@
     <script src="scripts/components/entities/expedicion/expedicion.service.js"></script>
     <script src="scripts/components/entities/expedicion/expedicion.search.service.js"></script>
     <script src="bower_components/messageformat/locale/es.js"></script>
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
     <!-- endbuild -->
-</body>
+
+        <style>
+
+            #wrapper {
+                padding-left: 0;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+
+            #wrapper.toggled {
+                padding-left: 250px;
+            }
+
+            #sidebar-wrapper {
+                z-index: 1000;
+                position: fixed;
+                left: 250px;
+                width: 0;
+                height: 100%;
+                margin-left: -250px;
+                background: #000;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                border-right: solid 7px #5e5e5e;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                width: 250px;
+            }
+
+            #page-content-wrapper {
+                width: 100%;
+                position: absolute;
+                padding: 15px;
+            }
+
+            #wrapper.toggled #page-content-wrapper {
+                position: absolute;
+                margin-right: -250px;
+            }
+
+            /* Sidebar Styles */
+
+            .sidebar-nav {
+                position: absolute;
+                top: 0;
+                width: 250px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .sidebar-nav li {
+                line-height: 40px;
+            }
+
+            .sidebar-nav li a {
+                display: block;
+                text-decoration: none;
+                color: #999999;
+                margin-left: -15px;
+            }
+
+            .sidebar-nav li a:hover {
+                text-decoration: none;
+                background-size: 50%;
+                background-color: #5e5e5e;
+                color: black;
+            }
+
+            .sidebar-nav li a:active,
+            .sidebar-nav li a:focus {
+                text-decoration: none;
+                background-size: 50%;
+                background-color: #5e5e5e;
+                color: black;
+                width: 156px;
+            }
+
+            .sidebar-nav > .sidebar-brand {
+                height: 65px;
+                font-size: 18px;
+                line-height: 60px;
+            }
+
+            .sidebar-nav > .sidebar-brand a {
+                color: #999999;
+            }
+
+            .sidebar-nav > .sidebar-brand a:hover {
+                color: #fff;
+                background: none;
+            }
+
+            @media(min-width:768px) {
+                #wrapper {
+                    padding-left: 150px;
+                }
+
+                #wrapper.toggled {
+                    padding-left: 0;
+                }
+
+                #sidebar-wrapper {
+                    width: 150px;
+                }
+
+                #wrapper.toggled #sidebar-wrapper {
+                    width: 0;
+                }
+
+                #page-content-wrapper {
+                    padding: 20px;
+                    position: relative;
+                }
+
+                #wrapper.toggled #page-content-wrapper {
+                    position: relative;
+                    margin-right: 0;
+                }
+            }
+            .menuSpan{ margin-left: 10px;}
+            .menuTitle{ margin-left: 5px;}
+            .menuTop{ margin-top: 60px;}
+            .header{ height: 70px; background-color: #2f4f90; width: auto;}
+            .MenuHover{ width: 144px;}
+        </style>
+
+    </body>
 </html>

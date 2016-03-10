@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav  role="navigation">
     <div class="side-menu-container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -9,14 +9,32 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse" ng-switch="isAuthenticated()">
-            <ul class="nav navbar-nav navbar-left ">
-                <li ui-sref-active="active">
-                    <a ui-sref="home" data-toggle="collapse" data-target=".navbar-collapse.in">
-                        <span class="glyphicon glyphicon-home"></span>
-                        <span class="hidden-sm" translate="global.menu.home">Home</span>
+            <ul class="sidebar-nav menuTop">
+                <li ui-sref-active="active" >
+                    <a class="MenuHover" ui-sref="home" data-toggle="collapse" data-target=".navbar-collapse.in">
+                        <span class="glyphicon glyphicon-home menuSpan"></span>
+                        <span class="hidden-sm menuTitle" translate="global.menu.home">Home</span>
                     </a>
                 </li>
-                <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
+                <li ui-sref-active="active" >
+                    <a class="MenuHover" ui-sref="camion" data-toggle="collapse" data-target=".navbar-collapse.in">
+                        <span class="glyphicon glyphicon-asterisk menuSpan"></span>
+                        <span class="menuTitle">Camiones</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active" >
+                    <a class="MenuHover" ui-sref="delegacion" data-toggle="collapse" data-target=".navbar-collapse.in">
+                        <span class="glyphicon glyphicon-home menuSpan"></span>
+                        <span class="menuTitle">Delegaciones</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active" >
+                    <a class="MenuHover" ui-sref="expedicion" data-toggle="collapse" data-target=".navbar-collapse.in">
+                        <span class="glyphicon glyphicon-tasks menuSpan"></span>
+                        <span class="menuTitle">Expediciones</span>
+                    </a>
+                </li>
+                <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here
                 <li ui-sref-active="active" ng-switch-when="true" class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                         <span>
@@ -34,14 +52,14 @@
                         &#xA0;<span translate="global.menu.entities.delegacion">delegacion</span></a></li>
                         <li ui-sref-active="active" ><a ui-sref="expedicion" data-toggle="collapse" data-target=".navbar-collapse.in"><span class="glyphicon glyphicon-asterisk"></span>
                         &#xA0;<span translate="global.menu.entities.expedicion">expedicion</span></a></li>
-                        <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+                        <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here
                     </ul>
-                </li>
+                </li>-->
                 <li ng-class="{active: $state.includes('account')}" class="dropdown pointer">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="" id="account-menu">
+                    <a class="dropdown-toggle MenuHover" data-toggle="dropdown" href="" id="account-menu">
                         <span>
-                            <span class="glyphicon glyphicon-user"></span>
-                            <span class="hidden-sm" translate="global.menu.account.main">
+                            <span class="glyphicon glyphicon-user menuSpan"></span>
+                            <span class="hidden-sm menuTitle" translate="global.menu.account.main">
                                 Account
                             </span>
                             <b class="caret"></b>
@@ -62,7 +80,7 @@
                             &#xA0;<span translate="global.menu.account.register">Register</span></a></li>
                     </ul>
                 </li>
-                <li ng-class="{active: $state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" class="dropdown pointer">
+                <!--<li ng-class="{active: $state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="" id="admin-menu">
                         <span>
                             <span class="glyphicon glyphicon-tower"></span>
@@ -86,8 +104,9 @@
                         <li ng-hide="inProduction" ui-sref-active="active"><a ui-sref="docs" data-toggle="collapse" data-target=".navbar-collapse.in"><span class="glyphicon glyphicon-book"></span>
                             &#xA0;<span translate="global.menu.admin.apidocs">API</span></a></li>
                     </ul>
-                </li>
-                <li ui-sref-active="active" class="dropdown pointer" ng-controller="LanguageController">
+                </li>-->
+
+                <!--<li ui-sref-active="active" class="dropdown pointer" ng-controller="LanguageController">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                         <span>
                             <span class="glyphicon glyphicon-flag"></span>
@@ -95,12 +114,12 @@
                             <b class="caret"></b>
                         </span>
                     </a>
-                    <ul class="dropdown-menu">
+                   <ul class="dropdown-menu">
                         <li active-menu="{{language}}" ng-repeat="language in languages">
                             <a href="" ng-click="changeLanguage(language)" data-toggle="collapse" data-target=".navbar-collapse.in">{{language | findLanguageFromKey}}</a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
             </ul>
         </div>
     </div>
