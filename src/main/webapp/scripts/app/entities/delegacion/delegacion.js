@@ -64,6 +64,7 @@ angular.module('nowLocateApp')
                                     localidad: null,
                                     volumenAlmacen: null,
                                     calle: null,
+                                    position: null,
                                     id: null
                                 };
                             }

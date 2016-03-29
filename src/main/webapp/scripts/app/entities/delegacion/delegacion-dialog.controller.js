@@ -1,8 +1,22 @@
 'use strict';
 
 angular.module('nowLocateApp').controller('DelegacionDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Delegacion', 'Expedicion',
-        function($scope, $stateParams, $uibModalInstance, entity, Delegacion, Expedicion) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Delegacion', 'Expedicion','NgMap',
+        function($scope, $stateParams, $uibModalInstance, entity, Delegacion, Expedicion ,NgMap) {
+
+            $scope.lat = [];
+            $scope.lng = [];
+            $scope.placeChanged = function() {
+                $scope.place = this.getPlace();
+
+                $scope.map.setCenter($scope.place.geometry.location);
+                $scope.lat = $scope.place.geometry.location.lat();
+                $scope.lng = $scope.place.geometry.location.lng();
+
+            }
+            NgMap.getMap().then(function(map) {
+                $scope.map = map;
+            });
 
         $scope.delegacion = entity;
         $scope.expedicions = Expedicion.query();

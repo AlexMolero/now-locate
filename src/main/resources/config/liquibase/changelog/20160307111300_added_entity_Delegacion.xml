@@ -24,6 +24,7 @@
             <column name="localidad" type="varchar(255)"/>
             <column name="volumen_almacen" type="integer"/>
             <column name="calle" type="varchar(255)"/>
+            <column name="position" type="varchar(255)"/>
         </createTable>
         
     </changeSet>

@@ -33,6 +33,9 @@ public class Delegacion implements Serializable {
     @Column(name = "calle")
     private String calle;
 
+    @Column(name = "position")
+    private String position;
+
     @OneToMany(mappedBy = "delegacionInicio")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -75,6 +78,14 @@ public class Delegacion implements Serializable {
         this.calle = calle;
     }
 
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
     public Set<Expedicion> getExpedicions() {
         return expedicions;
     }
@@ -115,6 +126,7 @@ public class Delegacion implements Serializable {
             ", localidad='" + localidad + "'" +
             ", volumenAlmacen='" + volumenAlmacen + "'" +
             ", calle='" + calle + "'" +
+            ", position='" + position + "'" +
             '}';
     }
 }

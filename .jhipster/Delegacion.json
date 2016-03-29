@@ -30,6 +30,11 @@
             "fieldId": 3,
             "fieldName": "calle",
             "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "position",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20160307111300",

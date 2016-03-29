@@ -18,6 +18,7 @@
             "localidad": "Localidad",
             "volumenAlmacen": "VolumenAlmacen",
             "calle": "Calle",
+            "position": "Position",
             "expedicion": "Expedicion",
             "expedicionFin": "ExpedicionFin"
         }

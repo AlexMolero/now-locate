@@ -28,6 +28,7 @@
                     <th jh-sort-by="localidad"><span translate="nowLocateApp.delegacion.localidad">Localidad</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="volumenAlmacen"><span translate="nowLocateApp.delegacion.volumenAlmacen">VolumenAlmacen</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="calle"><span translate="nowLocateApp.delegacion.calle">Calle</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="position"><span translate="nowLocateApp.delegacion.position">Position</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -37,6 +38,7 @@
                     <td>{{delegacion.localidad}}</td>
                     <td>{{delegacion.volumenAlmacen}}</td>
                     <td>{{delegacion.calle}}</td>
+                    <td>{{delegacion.position}}</td>
                     <td>
                         <button type="submit"
                                 ui-sref="delegacion.detail({id:delegacion.id})"
